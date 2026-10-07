@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "environmentName": {
+      "value": "${AZURE_ENV_NAME}"
+    },
+    "location": {
+      "value": "${AZURE_LOCATION}"
+    },
+    "resourceGroupName": {
+      "value": "${AZURE_RESOURCE_GROUP=}"
+    },
+    "principalId": {
+      "value": "${AZURE_PRINCIPAL_ID=}"
+    },
+    "deployLanguage": {
+      "value": "${DEPLOY_LANGUAGE=true}"
+    },
+    "deployStorage": {
+      "value": "${DEPLOY_STORAGE=true}"
+    },
+    "languageSku": {
+      "value": "${LANGUAGE_SKU=S}"
+    },
+    "storageSku": {
+      "value": "${STORAGE_SKU=Standard_LRS}"
+    },
+    "sourceContainerName": {
+      "value": "${AZURE_STORAGE_SOURCE_CONTAINER=pii-source}"
+    },
+    "targetContainerName": {
+      "value": "${AZURE_STORAGE_TARGET_CONTAINER=pii-target}"
+    }
+  }
+}

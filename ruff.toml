@@ -1,0 +1,28 @@
+# Lint configuration, so `ruff check .` gives everyone the same answer.
+#
+#   .\.venv\Scripts\python.exe -m ruff check .
+
+target-version = "py311"
+line-length = 100
+exclude = [".venv", "evaluations", "docs", "infra"]
+
+[lint]
+select = [
+    "E", "F", "W",   # pycodestyle + pyflakes
+    "I",             # import sorting
+    "B",             # bugbear — real footguns
+    "S",             # bandit-style security rules
+    "BLE",           # blind except
+    "RUF",
+]
+ignore = [
+    # FastAPI's documented dependency-injection idiom is a function call in an
+    # argument default: `files: list[UploadFile] = File(...)`. Not a bug here.
+    "B008",
+    # Long prose in docstrings and comments; code itself stays within the limit.
+    "E501",
+]
+
+[lint.per-file-ignores]
+# Tests print, shell out, and must extend sys.path before importing the app.
+"tests/*" = ["S101", "S603", "S404", "E402"]

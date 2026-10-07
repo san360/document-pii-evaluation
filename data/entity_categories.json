@@ -1,0 +1,2648 @@
+[
+  {
+    "tag": "Airport",
+    "name": "Airport",
+    "group": "Geolocation",
+    "preview": true,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "City",
+    "name": "City",
+    "group": "Geolocation",
+    "preview": true,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "GPE",
+    "name": "Geopolitical Entity GPE",
+    "group": "Geolocation",
+    "preview": true,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "Location",
+    "name": "Location",
+    "group": "Geolocation",
+    "preview": true,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "State",
+    "name": "State",
+    "group": "Geolocation",
+    "preview": true,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "Address",
+    "name": "Address",
+    "group": "Personal",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "Age",
+    "name": "Age",
+    "group": "Personal",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "DateOfBirth",
+    "name": "Date Of Birth",
+    "group": "Personal",
+    "preview": true,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "DriversLicenseNumber",
+    "name": "Drivers License Number",
+    "group": "Personal",
+    "preview": true,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "Email",
+    "name": "Email",
+    "group": "Personal",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "IPAddress",
+    "name": "IP Address",
+    "group": "Personal",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "LicensePlate",
+    "name": "License Plate",
+    "group": "Personal",
+    "preview": true,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "PassportNumber",
+    "name": "Passport Number",
+    "group": "Personal",
+    "preview": true,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "Password",
+    "name": "Password",
+    "group": "Personal",
+    "preview": true,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "Person",
+    "name": "Person",
+    "group": "Personal",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "PersonType",
+    "name": "Person Type",
+    "group": "Personal",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "PhoneNumber",
+    "name": "Phone Number",
+    "group": "Personal",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "URL",
+    "name": "URL",
+    "group": "Personal",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "VIN",
+    "name": "VIN",
+    "group": "Personal",
+    "preview": true,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": []
+  },
+  {
+    "tag": "ABARoutingNumber",
+    "name": "American Bankers Association Routing Number",
+    "group": "Financial",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "BankAccountNumber",
+    "name": "Bank Account Number",
+    "group": "Financial",
+    "preview": true,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "CreditCardNumber",
+    "name": "Credit Card Number",
+    "group": "Financial",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "InternationalBankingAccountNumber",
+    "name": "International Banking Account Number",
+    "group": "Financial",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "SortCode",
+    "name": "Sort Code",
+    "group": "Financial",
+    "preview": true,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "SWIFTCode",
+    "name": "SWIFT Code",
+    "group": "Financial",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "Organization",
+    "name": "Organization",
+    "group": "Organization",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "Date",
+    "name": "Date",
+    "group": "DateTime",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "ExpirationDate",
+    "name": "Expiration Date",
+    "group": "DateTime",
+    "preview": true,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "AzureDocumentDBAuthKey",
+    "name": "Azure Document DB Auth Key",
+    "group": "Azure-related",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "AzureIAASDatabaseConnectionAndSQLString",
+    "name": "Azure IAAS Database Connection And SQL String",
+    "group": "Azure-related",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "AzureIoTConnectionString",
+    "name": "Azure IoT Connection String",
+    "group": "Azure-related",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "AzurePublishSettingPassword",
+    "name": "Azure Publish Setting Password",
+    "group": "Azure-related",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "AzureRedisCacheString",
+    "name": "Azure Redis Cache String",
+    "group": "Azure-related",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "AzureSAS",
+    "name": "Azure SAS",
+    "group": "Azure-related",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "AzureServiceBusString",
+    "name": "Azure Service Bus String",
+    "group": "Azure-related",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "AzureStorageAccountGeneric",
+    "name": "Azure Storage Account Generic",
+    "group": "Azure-related",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "AzureStorageAccountKey",
+    "name": "Azure Storage Account Key",
+    "group": "Azure-related",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "ARNationalIdentityNumber",
+    "name": "Argentina National Identity Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "AUBankAccountNumber",
+    "name": "Australia Bank Account Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "AUBusinessNumber",
+    "name": "Australia Business Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "AUCompanyNumber",
+    "name": "Australia Company Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "AUDriversLicenseNumber",
+    "name": "Australia Drivers License Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "AUMedicalAccountNumber",
+    "name": "Australia Medical Account Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "AUPassportNumber",
+    "name": "Australia Passport Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "AUTaxFileNumber",
+    "name": "Australia Tax File Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "ATIdentityCard",
+    "name": "Austria Identity Card",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "ATTaxIdentificationNumber",
+    "name": "Austria Tax Identification Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "ATValueAddedTaxNumber",
+    "name": "Austria Value Added Tax Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "BENationalNumber",
+    "name": "Belgium National Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "BEValueAddedTaxNumber",
+    "name": "Belgium Value Added Tax Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "BRCPFNumber",
+    "name": "Brazil CPF Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "BRLegalEntityNumber",
+    "name": "Brazil Legal Entity Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "BRNationalIDRG",
+    "name": "Brazil National IDRG",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "BGUniformCivilNumber",
+    "name": "Bulgaria Uniform Civil Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "CABankAccountNumber",
+    "name": "Canada Bank Account Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "CADriversLicenseNumber",
+    "name": "Canada Drivers License Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "CAHealthServiceNumber",
+    "name": "Canada Health Service Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "CAPassportNumber",
+    "name": "Canada Passport Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "CAPersonalHealthIdentification",
+    "name": "Canada Personal Health Identification",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "CASocialIdentificationNumber",
+    "name": "Canada Social Identification Number",
+    "group": "Government",
+    "preview": true,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": []
+  },
+  {
+    "tag": "CASocialInsuranceNumber",
+    "name": "Canada Social Insurance Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "CVV",
+    "name": "Card Verification Value CVV",
+    "group": "Government",
+    "preview": true,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "CLIdentityCardNumber",
+    "name": "Chile Identity Card Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "CNResidentIdentityCardNumber",
+    "name": "China Resident Identity Card Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "HRIdentityCardNumber",
+    "name": "Croatia Identity Card Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "HRNationalIDNumber",
+    "name": "Croatia National ID Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "HRPersonalIdentificationNumber",
+    "name": "Croatia Personal Identification Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "CYIdentityCard",
+    "name": "Cyprus Identity Card",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "CYTaxIdentificationNumber",
+    "name": "Cyprus Tax Identification Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "CZPersonalIdentityNumber",
+    "name": "Czech Republic Personal Identity Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "DKPersonalIdentificationNumber",
+    "name": "Denmark Personal Identification Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "EEPersonalIdentificationCode",
+    "name": "Estonia Personal Identification Code",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "EUDebitCardNumber",
+    "name": "European Union Debit Card Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "EUDriversLicenseNumber",
+    "name": "European Union Drivers License Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "EUGPSCoordinates",
+    "name": "European Union GPS Coordinates",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "EUNationalIdentificationNumber",
+    "name": "European Union National Identification Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "EUPassportNumber",
+    "name": "European Union Passport Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "EUSocialSecurityNumber",
+    "name": "European Union Social Security Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "EUTaxIdentificationNumber",
+    "name": "European Union Tax Identification Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "FIEuropeanHealthNumber",
+    "name": "Finland European Health Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "FINationalID",
+    "name": "Finland National ID",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "FIPassportNumber",
+    "name": "Finland Passport Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "FRDriversLicenseNumber",
+    "name": "France Drivers License Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "FRHealthInsuranceNumber",
+    "name": "France Health Insurance Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "FRNationalID",
+    "name": "France National ID",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "FRPassportNumber",
+    "name": "France Passport Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "FRSocialSecurityNumber",
+    "name": "France Social Security Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "FRTaxIdentificationNumber",
+    "name": "France Tax Identification Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "FRValueAddedTaxNumber",
+    "name": "France Value Added Tax Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "DEDriversLicenseNumber",
+    "name": "Germany Drivers License Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "DEIdentityCardNumber",
+    "name": "Germany Identity Card Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "DEPassportNumber",
+    "name": "Germany Passport Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "DETaxIdentificationNumber",
+    "name": "Germany Tax Identification Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "DEValueAddedNumber",
+    "name": "Germany Value Added Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "GRNationalIDCard",
+    "name": "Greece National ID Card",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "GRTaxIdentificationNumber",
+    "name": "Greece Tax Identification Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "HKIdentityCardNumber",
+    "name": "Hong Kong SAR Identity Card Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "HUPersonalIdentificationNumber",
+    "name": "Hungary Personal Identification Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "HUTaxIdentificationNumber",
+    "name": "Hungary Tax Identification Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "HUValueAddedNumber",
+    "name": "Hungary Value Added Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "INPermanentAccount",
+    "name": "India Permanent Account",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "INUniqueIdentificationNumber",
+    "name": "India Unique Identification Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "IDIdentityCardNumber",
+    "name": "Indonesia Identity Card Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "IEPersonalPublicServiceNumber",
+    "name": "Ireland Personal Public Service Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "ILBankAccountNumber",
+    "name": "Israel Bank Account Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "ILNationalID",
+    "name": "Israel National ID",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "ITDriversLicenseNumber",
+    "name": "Italy Drivers License Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "ITFiscalCode",
+    "name": "Italy Fiscal Code",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "ITValueAddedTaxNumber",
+    "name": "Italy Value Added Tax Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "JPBankAccountNumber",
+    "name": "Japan Bank Account Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "JPDriversLicenseNumber",
+    "name": "Japan Drivers License Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "JPMyNumberCorporate",
+    "name": "Japan My Number Corporate",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "JPMyNumberPersonal",
+    "name": "Japan My Number Personal",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "JPPassportNumber",
+    "name": "Japan Passport Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "JPResidenceCardNumber",
+    "name": "Japan Residence Card Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "JPResidentRegistrationNumber",
+    "name": "Japan Resident Registration Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "JPSocialInsuranceNumber",
+    "name": "Japan Social Insurance Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "LVPersonalCode",
+    "name": "Latvia Personal Code",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "LTPersonalCode",
+    "name": "Lithuania Personal Code",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "LUNationalIdentificationNumberNatural",
+    "name": "Luxembourg National Identification Number Natural",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "LUNationalIdentificationNumberNonNatural",
+    "name": "Luxembourg National Identification Number Non Natural",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "MYIdentityCardNumber",
+    "name": "Malaysia Identity Card Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "MTIdentityCardNumber",
+    "name": "Malta Identity Card Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "MTTaxIDNumber",
+    "name": "Malta Tax ID Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "NLCitizensServiceNumber",
+    "name": "Netherlands Citizens Service Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "NLTaxIdentificationNumber",
+    "name": "Netherlands Tax Identification Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "NLValueAddedTaxNumber",
+    "name": "Netherlands Value Added Tax Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "NZBankAccountNumber",
+    "name": "New Zealand Bank Account Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "NZDriversLicenseNumber",
+    "name": "New Zealand Drivers License Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "NZInlandRevenueNumber",
+    "name": "New Zealand Inland Revenue Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "NZMinistryOfHealthNumber",
+    "name": "New Zealand Ministry Of Health Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "NZSocialWelfareNumber",
+    "name": "New Zealand Social Welfare Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "NOIdentityNumber",
+    "name": "Norway Identity Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "PHUnifiedMultiPurposeIDNumber",
+    "name": "Philippines Unified Multi Purpose ID Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "PLIdentityCard",
+    "name": "Poland Identity Card",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "PLNationalID",
+    "name": "Poland National ID",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "PLPassportNumber",
+    "name": "Poland Passport Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "PLREGONNumber",
+    "name": "Poland REGON Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "PLTaxIdentificationNumber",
+    "name": "Poland Tax Identification Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "PTCitizenCardNumber",
+    "name": "Portugal Citizen Card Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "PTTaxIdentificationNumber",
+    "name": "Portugal Tax Identification Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "ROPersonalNumericalCode",
+    "name": "Romania Personal Numerical Code",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "RUPassportNumberDomestic",
+    "name": "Russia Passport Number Domestic",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "RUPassportNumberInternational",
+    "name": "Russia Passport Number International",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "SANationalID",
+    "name": "Saudi Arabia National ID",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "SGNationalRegistrationIdentityCardNumber",
+    "name": "Singapore National Registration Identity Card Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "SKPersonalNumber",
+    "name": "Slovakia Personal Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "SITaxIdentificationNumber",
+    "name": "Slovenia Tax Identification Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "SIUniqueMasterCitizenNumber",
+    "name": "Slovenia Unique Master Citizen Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "ZAIdentificationNumber",
+    "name": "South Africa Identification Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "KRDriversLicenseNumber",
+    "name": "South Korea Drivers License Number",
+    "group": "Government",
+    "preview": true,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "KRPassportNumber",
+    "name": "South Korea Passport Number",
+    "group": "Government",
+    "preview": true,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "KRSocialSecurityNumber",
+    "name": "South Korea Social Security Number",
+    "group": "Government",
+    "preview": true,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": []
+  },
+  {
+    "tag": "KRResidentRegistrationNumber",
+    "name": "South Korea Resident Registration Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "ESDNI",
+    "name": "Spain DNI",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "ESSocialSecurityNumber",
+    "name": "Spain Social Security Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "ESTaxIdentificationNumber",
+    "name": "Spain Tax Identification Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "SENationalID",
+    "name": "Sweden National ID",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "SETaxIdentificationNumber",
+    "name": "Sweden Tax Identification Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "CHSocialSecurityNumber",
+    "name": "Switzerland Social Security Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "TWNationalID",
+    "name": "Taiwanese ID",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "TWPassportNumber",
+    "name": "Taiwan Passport Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "TWResidentCertificate",
+    "name": "Taiwan Resident Certificate",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "THPopulationIdentificationCode",
+    "name": "Thailand Population Identification Code",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "TRNationalIdentificationNumber",
+    "name": "Türkiye National Identification Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "UAPassportNumberDomestic",
+    "name": "Ukraine Passport Number Domestic",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "UAPassportNumberInternational",
+    "name": "Ukraine Passport Number International",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "UKDriversLicenseNumber",
+    "name": "United Kingdom Drivers License Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "UKElectoralRollNumber",
+    "name": "United Kingdom Electoral Roll Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "UKNationalHealthNumber",
+    "name": "United Kingdom National Health Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "UKNationalInsuranceNumber",
+    "name": "United Kingdom National Insurance Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "UKUniqueTaxpayerNumber",
+    "name": "United Kingdom Unique Taxpayer Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "USBankAccountNumber",
+    "name": "United States Bank Account Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "USDriversLicenseNumber",
+    "name": "United States Drivers License Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "USIndividualTaxpayerIdentification",
+    "name": "United States Individual Taxpayer Identification",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "USSocialSecurityNumber",
+    "name": "United States Social Security Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  },
+  {
+    "tag": "USUKPassportNumber",
+    "name": "United States/United Kingdom Passport Number",
+    "group": "Government",
+    "preview": false,
+    "text_pii_api_versions": [
+      "2024-11-01",
+      "2026-05-01",
+      "2026-05-15-preview"
+    ],
+    "document_pii_api_versions": [
+      "2026-05-01",
+      "2026-05-15-preview"
+    ]
+  }
+]

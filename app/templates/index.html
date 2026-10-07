@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Document PII Evaluation</title>
+<link rel="stylesheet" href="/static/css/app.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%234a9eff'/><text x='16' y='23' font-size='18' font-family='sans-serif' font-weight='700' text-anchor='middle' fill='%230b1220'>P</text></svg>" />
+</head>
+<body>
+
+<header>
+  <div class="brandMark">P</div>
+  <h1>Document PII Evaluation</h1>
+  <span class="pill other" id="evalApiPill">—</span>
+  <div class="spacer"></div>
+  <span class="small muted" id="healthText">checking…</span>
+  <span class="statusDot" id="healthDot"></span>
+</header>
+
+<nav class="tabs" id="tabs">
+  <button class="tab active" data-tab="evaluate">Evaluate</button>
+  <button class="tab" data-tab="diagnostics">Diagnostics</button>
+</nav>
+
+<main>
+
+<!-- ----------------------------------------------------------- EVALUATE -->
+<section class="panel active" id="tab-evaluate">
+  <div class="card">
+    <div class="cardHead">
+      <h2>Submit documents</h2>
+      <div class="spacer"></div>
+      <span class="small muted">same code path as <code>evaluate_document_pii.py</code></span>
+    </div>
+    <p class="small muted mt0">
+      Calls <strong>only</strong> <code>analyze-documents/jobs</code>. No OCR, no text
+      extraction, no local redaction — whatever the service returns is the answer.
+    </p>
+    <div id="evalReadiness"></div>
+
+    <div class="drop" id="evalDrop">
+      <div class="dropTitle">Drop documents here</div>
+      <div class="small muted">or click to browse — several at once is fine (PDF, DOCX, TXT)</div>
+      <input type="file" id="evalFiles" accept=".pdf,.docx,.txt" multiple hidden />
+    </div>
+    <div id="evalFileList"></div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h2>Submission</h2>
+      <div id="evalModes"></div>
+      <div class="row">
+        <label class="field" style="flex:1;min-width:190px">
+          <span>api-version</span>
+          <select id="evalApiVersion"></select>
+        </label>
+        <label class="field" style="flex:1;min-width:150px">
+          <span>Masking policy</span>
+          <select id="evalPolicy"></select>
+        </label>
+      </div>
+      <div class="row" id="evalSyntheticRow" style="display:none">
+        <label class="check">
+          <input type="checkbox" id="evalPreserveFormat" />
+          Preserve data format <span class="small muted">— keep the shape of the original value</span>
+        </label>
+      </div>
+      <div class="row">
+        <label class="field" style="flex:1;min-width:150px">
+          <span>Language sent</span>
+          <input type="text" id="evalLanguage" value="en-US" />
+        </label>
+        <label class="field" style="flex:1;min-width:140px">
+          <span>Domain</span>
+          <select id="evalDomain">
+            <option value="none">General PII</option>
+            <option value="phi">Health (PHI)</option>
+          </select>
+        </label>
+      </div>
+      <div class="row">
+        <label class="check"><input type="checkbox" id="evalKeepUploads" /> Keep the staged source blobs</label>
+      </div>
+
+      <details id="evalCatBox" class="catBox">
+        <summary>
+          <span>PII categories</span>
+          <span class="small muted" id="evalCatSummary">all categories</span>
+        </summary>
+        <p class="small muted" style="margin:8px 0">
+          Leave everything unticked to let the service detect every category it
+          supports. Ticking a subset sends <code>piiCategories</code>, which is a
+          real filter — the service returns only what you ask for. Categories the
+          selected api-version rejects are shown struck through and are dropped
+          from the request rather than failing it.
+        </p>
+        <div class="row" style="margin:0 0 8px">
+          <button type="button" class="ghost small" id="evalCatNone">Clear all</button>
+          <input type="search" id="evalCatFilter" placeholder="filter…"
+                 style="flex:1;min-width:120px" />
+        </div>
+        <div id="evalCatList" class="catList"></div>
+      </details>
+
+      <details id="evalSynBox" class="catBox">
+        <summary>
+          <span>Entity synonyms</span>
+          <span class="small muted" id="evalSynSummary">none</span>
+        </summary>
+        <p class="small muted" style="margin:8px 0" id="evalSynHelp">
+          Context vocabulary that helps the model spot an entity from the words
+          around it — on a form, the label beside the value. Sends
+          <code>entitySynonyms</code>, which <b>only 2026-05-15-preview
+          accepts</b>. It widens detection; it will not make the service
+          recognise a value that does not look like the entity at all.
+        </p>
+        <div id="evalSynRows"></div>
+        <div class="row" style="margin-top:8px">
+          <button type="button" class="ghost small" id="evalSynAdd">Add synonym group</button>
+        </div>
+      </details>
+    </div>
+
+    <div class="card">
+      <h2>Run</h2>
+      <div class="row" style="margin-top:0">
+        <button class="primary" id="evalRun" disabled>Submit to Document PII</button>
+        <span class="small muted" id="evalHint">Add at least one document.</span>
+      </div>
+      <div id="evalProgress" style="display:none">
+        <div class="progressBar"><div class="progressFill" id="evalFill"></div></div>
+        <div class="row" style="margin-top:4px">
+          <span class="spin" id="evalSpin"></span>
+          <span class="small" id="evalStage">starting…</span>
+          <div class="spacer"></div>
+          <span class="small muted" id="evalElapsed"></span>
+        </div>
+        <div class="tableWrap" style="margin-top:10px;max-height:240px">
+          <table><tbody id="evalLog"></tbody></table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" id="evalResultCard" style="display:none">
+    <div class="cardHead">
+      <h2>Result</h2>
+      <div class="spacer"></div>
+      <span class="small muted" id="evalResultMeta"></span>
+      <button class="ghost small" id="evalShowJson">summary.json</button>
+    </div>
+    <div id="evalVerdict"></div>
+    <div class="tableWrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Document</th><th>Input</th><th>Result</th>
+            <th class="num">Time</th><th class="num">PII</th>
+            <th>Top categories</th><th>Artifacts</th>
+          </tr>
+        </thead>
+        <tbody id="evalResults"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="cardHead">
+      <h2>Past evaluations</h2>
+      <div class="spacer"></div>
+      <span class="small muted" id="evalDir"></span>
+      <button class="ghost" id="evalRefresh">refresh</button>
+    </div>
+    <div id="evalHistory" class="empty">Not listed yet.</div>
+  </div>
+</section>
+
+<!-- -------------------------------------------------------- DIAGNOSTICS -->
+<section class="panel" id="tab-diagnostics">
+  <div class="card">
+    <h2>Service readiness</h2>
+    <div id="diagReadiness"></div>
+  </div>
+  <div class="card">
+    <h2>Configuration</h2>
+    <p class="small muted mt0">
+      Set these in <code>.env</code> at the project root, then restart. The same file
+      is read by <code>evaluate_document_pii.py</code>, or generate it with
+      <code>./scripts/write-env.ps1</code> after <code>azd up</code>.
+    </p>
+    <div class="tableWrap">
+      <table>
+        <thead><tr><th>Variable</th><th>Purpose</th><th>Required</th></tr></thead>
+        <tbody id="envTable"></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="card">
+    <h2>Category support</h2>
+    <p class="small muted mt0">
+      Document PII rejects the <strong>entire request</strong> over one unsupported
+      category. These lists were probed against a live resource by
+      <code>tests/discover_categories.py</code>, not taken from documentation.
+    </p>
+    <div id="diagCategories"></div>
+  </div>
+</section>
+
+</main>
+
+<div class="pvBackdrop" id="jsonOverlay">
+  <div class="pvPanel">
+    <div class="pvHead">
+      <h3 id="jsonTitle">JSON</h3>
+      <div class="spacer"></div>
+      <button class="ghost" id="jsonClose">close</button>
+    </div>
+    <div class="pvBody"><pre class="code" id="jsonBody"></pre></div>
+  </div>
+</div>
+
+<div class="pvBackdrop" id="docOverlay">
+  <div class="pvPanel" style="width:min(1700px,100%);max-height:94vh">
+    <div class="pvHead">
+      <h3 id="docTitle">Document</h3>
+      <span class="pill" id="docEntityPill"></span>
+      <div class="spacer"></div>
+      <div class="seg" id="docView">
+        <button class="segBtn active" data-value="side">Side by side</button>
+        <button class="segBtn" data-value="redacted">Redacted only</button>
+        <button class="segBtn" data-value="source">Original only</button>
+      </div>
+      <button class="ghost" id="docDownload">download redacted</button>
+      <button class="ghost" id="docClose">close</button>
+    </div>
+    <div class="pvBody" style="padding:0">
+      <div class="docCompare" id="docCompare"></div>
+    </div>
+  </div>
+</div>
+
+<script src="/static/js/http.js" defer></script>
+<script src="/static/js/core.js" defer></script>
+<script src="/static/js/evaluate.js" defer></script>
+<script src="/static/js/diagnostics.js" defer></script>
+<script src="/static/js/boot.js" defer></script>
+</body>
+</html>

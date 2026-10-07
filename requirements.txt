@@ -1,0 +1,20 @@
+# Web console
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+# Not imported anywhere: FastAPI needs it to parse the multipart upload form,
+# and raises at request time without it.
+python-multipart==0.0.20
+pydantic-settings==2.7.1
+
+# Document PII API + blob staging
+requests==2.32.3
+azure-storage-blob==12.24.0
+azure-identity==1.19.0
+
+# Used for one thing only: labelling an input PDF as searchable or scanned so
+# the results table can be read at a glance. It plays no part in any API call,
+# and the evaluation runs without it.
+pymupdf==1.25.2
+
+# tests/discover_categories.py only — it probes the live service concurrently.
+httpx==0.28.1

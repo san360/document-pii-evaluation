@@ -1,0 +1,40 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+
+# Document PII Redaction Studio — provisioning only.
+#
+# There is deliberately NO `services:` block. azd provisions the resources the
+# app calls and deploys nothing, because the app runs locally. `azd up` and
+# `azd provision` are equivalent here; `azd deploy` has nothing to do.
+name: doc-redaction
+metadata:
+  template: doc-redaction@1.0.0
+
+infra:
+  provider: bicep
+  path: infra
+  module: main
+
+hooks:
+  preprovision:
+    windows:
+      shell: pwsh
+      run: ./scripts/check-quota.ps1
+      continueOnError: false
+      interactive: false
+    posix:
+      shell: sh
+      run: pwsh ./scripts/check-quota.ps1
+      continueOnError: false
+      interactive: false
+
+  postprovision:
+    windows:
+      shell: pwsh
+      run: ./scripts/write-env.ps1
+      continueOnError: false
+      interactive: true
+    posix:
+      shell: sh
+      run: pwsh ./scripts/write-env.ps1
+      continueOnError: false
+      interactive: true

@@ -1,0 +1,96 @@
+<mxfile host="app.diagrams.net" agent="doc-redaction" version="24.0.0">
+  <diagram name="Document PII evaluation" id="flow-main">
+    <mxGraphModel dx="1400" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageWidth="1500" pageHeight="1080" math="0" shadow="0" background="#0f1117">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="Document PII evaluation — what happens when you submit a file" style="text;html=1;align=left;verticalAlign=middle;fontSize=21;fontStyle=1;fontColor=#e6e8ee;" vertex="1" parent="1">
+          <mxGeometry x="40" y="18" width="900" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="The only Azure call is analyze-documents/jobs. Green runs locally; blue is the network. Red is a measured gotcha." style="text;html=1;align=left;verticalAlign=middle;fontSize=12;fontColor=#9aa3b5;" vertex="1" parent="1">
+          <mxGeometry x="40" y="48" width="1000" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- surfaces -->
+        <mxCell id="S1" value="&lt;b&gt;Browser&lt;/b&gt; — Evaluate tab&lt;br/&gt;&lt;font color=&quot;#9aa3b5&quot;&gt;drop files · mode · api-version · categories&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#171a23;strokeColor=#2a2f3d;fontColor=#e6e8ee;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="80" y="110" width="300" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="S2" value="&lt;b&gt;CLI&lt;/b&gt; — evaluate_document_pii.py&lt;br/&gt;&lt;font color=&quot;#9aa3b5&quot;&gt;--input docs --mode batch --categories …&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#171a23;strokeColor=#2a2f3d;fontColor=#e6e8ee;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="80" y="192" width="300" height="56" as="geometry" />
+        </mxCell>
+
+        <mxCell id="CORE" value="&lt;b&gt;run_evaluation(config, options, documents)&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#a6e6b0&quot;&gt;one implementation — the two surfaces cannot&lt;br/&gt;send different requests&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#142a18;strokeColor=#2b5c32;fontColor=#e6e8ee;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="470" y="138" width="360" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="eS1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#9aa3b5;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="S1" target="CORE"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="eS2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#9aa3b5;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="S2" target="CORE"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- steps -->
+        <mxCell id="P1" value="&lt;b&gt;1 · label the input&lt;/b&gt;&lt;br/&gt;searchable or scanned, for the results table only&lt;br/&gt;&lt;font color=&quot;#a6e6b0&quot;&gt;local · plays no part in the API call&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#142a18;strokeColor=#2b5c32;fontColor=#e6e8ee;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="80" y="310" width="380" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P2" value="&lt;b&gt;2 · resolve categories&lt;/b&gt;&lt;br/&gt;a real filter: all→10 entities, Person+Phone→2&lt;br/&gt;&lt;font color=&quot;#f0a8ab&quot;&gt;one unsupported category fails the WHOLE request&lt;br/&gt;— so the 3 that 2026-05-01 refuses are dropped here&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#142a18;strokeColor=#2b5c32;fontColor=#e6e8ee;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="80" y="390" width="380" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="P3" value="&lt;b&gt;3 · upload to pii-source&lt;/b&gt;&lt;br/&gt;the API cannot take an uploaded file — it reads a blob" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1f3d5c;strokeColor=#4a9eff;fontColor=#cfe2ff;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="80" y="470" width="380" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="P4" value="&lt;b&gt;4 · mint SAS&lt;/b&gt; — blob read + container write&lt;br/&gt;&lt;font color=&quot;#f0a8ab&quot;&gt;must last ≥ 24 h or the job is rejected with a&lt;br/&gt;400 that names neither the SAS nor the expiry&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#142a18;strokeColor=#2b5c32;fontColor=#e6e8ee;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="80" y="544" width="380" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="P5" value="&lt;b&gt;5 · POST /language/analyze-documents/jobs&lt;/b&gt;&lt;br/&gt;body carries the two SAS URLs — &lt;b&gt;not&lt;/b&gt; the file&lt;br/&gt;per-document: one job each (92.7s) · batch: one job (58.7s)&lt;br/&gt;&lt;font color=&quot;#9aa3b5&quot;&gt;same entity counts either way — batch is just faster&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1f3d5c;strokeColor=#4a9eff;fontColor=#cfe2ff;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="80" y="626" width="380" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="P6" value="&lt;b&gt;6 · poll&lt;/b&gt; until succeeded&lt;br/&gt;the service extracts, redacts and writes to pii-target itself" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1f3d5c;strokeColor=#4a9eff;fontColor=#cfe2ff;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="80" y="708" width="380" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="P7" value="&lt;b&gt;7 · download artifacts&lt;/b&gt;&lt;br/&gt;redacted file + *.result.json&lt;br/&gt;&lt;font color=&quot;#a6e6b0&quot;&gt;then the staged source blobs are deleted&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1f3d5c;strokeColor=#4a9eff;fontColor=#cfe2ff;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="80" y="782" width="380" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P8" value="&lt;b&gt;8 · write evaluations/&amp;lt;timestamp&amp;gt;/&lt;/b&gt;&lt;br/&gt;summary.json · source.pdf · redacted · result.json&lt;br/&gt;&lt;font color=&quot;#9aa3b5&quot;&gt;gitignored · both surfaces list each other's runs&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#142a18;strokeColor=#2b5c32;fontColor=#e6e8ee;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="80" y="862" width="380" height="62" as="geometry" />
+        </mxCell>
+
+        <mxCell id="eC" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#9aa3b5;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="CORE" target="P1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#9aa3b5;" edge="1" parent="1" source="P1" target="P2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e23" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#9aa3b5;" edge="1" parent="1" source="P2" target="P3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e34" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#9aa3b5;" edge="1" parent="1" source="P3" target="P4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e45" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#9aa3b5;" edge="1" parent="1" source="P4" target="P5"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e56" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#9aa3b5;" edge="1" parent="1" source="P5" target="P6"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e67" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#9aa3b5;" edge="1" parent="1" source="P6" target="P7"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e78" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#9aa3b5;" edge="1" parent="1" source="P7" target="P8"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- azure -->
+        <mxCell id="AZ" value="AZURE — resources in your own subscription" style="rounded=0;html=1;fillColor=#141822;strokeColor=#4a9eff;dashed=1;verticalAlign=top;fontColor=#cfe2ff;fontSize=12;fontStyle=1;spacingTop=8;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="900" y="440" width="540" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="Z1" value="&lt;b&gt;Blob Storage · &lt;font face=&quot;Courier New&quot;&gt;pii-source&lt;/font&gt;&lt;/b&gt;&lt;br/&gt;the document is stored here&lt;br/&gt;&lt;font color=&quot;#a6e6b0&quot;&gt;deleted after each run&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1f3d5c;strokeColor=#4a9eff;fontColor=#cfe2ff;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="930" y="490" width="480" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Z2" value="&lt;b&gt;Language · Document PII&lt;/b&gt;&lt;br/&gt;reads the blob via SAS, extracts, redacts, writes back&lt;br/&gt;&lt;font color=&quot;#9aa3b5&quot;&gt;asynchronous job · 24 h expiry&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1f3d5c;strokeColor=#4a9eff;fontColor=#cfe2ff;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="930" y="600" width="480" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3" value="&lt;b&gt;Blob Storage · &lt;font face=&quot;Courier New&quot;&gt;pii-target&lt;/font&gt;&lt;/b&gt;&lt;br/&gt;redacted file + result.json land here&lt;br/&gt;&lt;font color=&quot;#f0dfb0&quot;&gt;NOT auto-deleted — your retention policy applies&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1f3d5c;strokeColor=#4a9eff;fontColor=#cfe2ff;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="930" y="710" width="480" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ez1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4a9eff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="P3" target="Z1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ez2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4a9eff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="P5" target="Z2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ez3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4a9eff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="Z1" target="Z2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ez4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4a9eff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="Z2" target="Z3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ez5" value="artifacts back" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#d29922;fontColor=#f0dfb0;fontSize=10;labelBackgroundColor=#0f1117;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="Z3" target="P7"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="NOTE" value="&lt;b&gt;What the service returns&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;&lt;font face=&quot;Courier New&quot;&gt;{ &quot;text&quot;: &quot;Contoso Insurance Ltd&quot;,&lt;br/&gt;&#160;&#160;&quot;type&quot;: &quot;Organization&quot;,&lt;br/&gt;&#160;&#160;&quot;mask&quot;: &quot;*****…&quot;, &quot;length&quot;: 21,&lt;br/&gt;&#160;&#160;&quot;confidenceScore&quot;: 0.96 }&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;&lt;font color=&quot;#f0a8ab&quot;&gt;• the field is &lt;b&gt;type&lt;/b&gt;, not category&lt;br/&gt;• there is &lt;b&gt;no offset&lt;/b&gt; — only a length, so an&lt;br/&gt;&#160;&#160;entity cannot be mapped back to a position&lt;br/&gt;• text is &lt;b&gt;normalised&lt;/b&gt;: 08/15/2025 → 2025-08-15&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2c1618;strokeColor=#5c2b2e;fontColor=#f0a8ab;fontSize=10;align=left;spacingLeft=12;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="900" y="110" width="540" height="250" as="geometry" />
+        </mxCell>
+
+        <mxCell id="VIEW" value="&lt;b&gt;Reviewing it&lt;/b&gt; — the Evaluate tab serves the redacted file and the kept source.pdf back to the browser side by side, so you can see what the service actually removed. That is display only; nothing is re-processed." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#171a23;strokeColor=#2a2f3d;fontColor=#e6e8ee;fontSize=11;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="500" y="862" width="940" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="eV" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#9aa3b5;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="P8" target="VIEW"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
