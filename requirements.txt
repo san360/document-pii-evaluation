@@ -7,7 +7,7 @@ python-multipart==0.0.20
 pydantic-settings==2.7.1
 
 # Document PII API + blob staging
-requests==2.32.3
+requests==2.33.0
 azure-storage-blob==12.24.0
 azure-identity==1.19.0
 
