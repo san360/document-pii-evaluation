@@ -3,7 +3,7 @@ fastapi==0.115.6
 uvicorn[standard]==0.34.0
 # Not imported anywhere: FastAPI needs it to parse the multipart upload form,
 # and raises at request time without it.
-python-multipart==0.0.20
+python-multipart==0.0.31
 pydantic-settings==2.7.1
 
 # Document PII API + blob staging
